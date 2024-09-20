@@ -2,7 +2,7 @@
 
 ## Orientation
 
-In this lab, we will focus on preparing you for your journey into containerized C++ development using cmake and other build tools. In the first part of this exercise, you will create a Dockerfile allows you to build an image that encapsulates your C++ development environment. Though it's not the case that every development project can be achieved using the same image (projects may require different sets of depencies, for example, or versions of dependencies), it's the case that many projects may require a common set of software to develop (e.g. a compiler, or build tools like cmake). In this project we will build a base docker image which you can use for development during later exercises in this course. We will also illustrate how you can _extend_ that base development image to create new images that contain project specific dependencies like BLAS or MPI.
+In this lab, we will focus on preparing you for your journey into containerized C++ development using cmake and other build tools. In the first part of this exercise, you will create a Dockerfile that allows you to build an image that encapsulates your C++ development environment. Though it's not the case that every development project can be achieved using the same image (projects may require different sets of depencies, for example, or versions of dependencies), it's the case that many projects may require a common set of software to develop (e.g. a compiler, or build tools like cmake). In this project we will build a base docker image which you can use for development during later exercises in this course. We will also illustrate how you can _extend_ that base development image to create new images that contain project specific dependencies like BLAS or MPI. Afterward, you will implement a simple linear algebra library and then write a test suite for it using the GoogleTest framework. Finally, you'll create a github action which runs your tests. If you have extra time left over, explore the `gcov` code coverage package.
 
 > [!TIP]
 > For this lab, it will be very valuable for everyone to perform the instructions on their own machines at the same time. Help each other debug problems that crop up. You can use the development images you produce here in future assignments.
@@ -68,6 +68,8 @@ To finish our library, you need to complete the implementations of the following
 ### Part 4: Writing unit tests using the Google Testing framework
 
 Depending on your personality, writing tests can feel boring or comforting or anywhere in between. Regardless, it is a foundational aspect of software development. If you are interviewed for a job by a company that does no automated testing, I recommend vigorously searching for a different position. Without automated tests it is fantastically difficult to be aware of regressions that occur with each change to large codebase. As a result, even scientists and engineers who think of test writing as boring or secondary will come to enjoy the security guaranteed by a thorough test suite.
+
+[GoogleTest information can be found here!](https://google.github.io/googletest/primer.html)
 
 To ensure that your function implementations are correct, use the Google Test Framework to write test cases for your projection function.
 
